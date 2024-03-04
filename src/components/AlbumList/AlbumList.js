@@ -116,6 +116,7 @@ const AlbumList = ({ image, title, songsData }) => {
             ) : (
               <RectCard
                 key={"1"}
+                id={selectdata._id}
                 title={selectdata.title || selectdata[0].title}
                 image={selectdata.thumbnail || selectdata[0].thumbnail}
                 link={selectdata.link}

@@ -52,7 +52,8 @@ function RectCard({ title, id, image, link, heart, isPlaying, activeSong }) {
             ? prevLikedSongs.filter((_id) => _id !== id)
             : [...prevLikedSongs, id]
         );
-        setIsLiked(!isLiked);
+        // setIsLiked(!isLiked);
+        // console.log("isLiked:", isLiked);
       } else {
         toast.error(res.message, {
           position: toast.POSITION.TOP_CENTER,
