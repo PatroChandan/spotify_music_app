@@ -1,0 +1,233 @@
+.navbar,
+.navbar-left,
+.navbar-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(29, 13, 70, 0.5);
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  a:hover {
+    text-decoration: none;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .navbar-left {
+    column-gap: 8px;
+    button {
+      ion-icon {
+        font-size: 40px;
+        color: #000;
+      }
+      ::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        z-index: -1;
+      }
+    }
+    .play-btn {
+      width: 60px;
+      ion-icon {
+        font-size: 58px;
+        color: #57b65f;
+      }
+      ::before {
+        background: #000;
+      }
+      &:hover {
+        ion-icon {
+          font-size: 60px;
+        }
+      }
+    }
+    .searchBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #fff;
+      padding: 10px;
+      border-radius: 30px;
+      background-color: #000;
+      ion-icon {
+        color: #fff;
+        font-size: 1rem;
+        margin-right: 5px;
+      }
+      input {
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: medium;
+      }
+      :focus {
+        outline: none;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .forward {
+        display: none;
+      }
+    }
+  }
+
+  .navbar-right {
+    column-gap: 32px;
+
+    button {
+      height: 34px;
+      border-radius: 20px;
+    }
+
+    .playlist-btn {
+      display: none;
+    }
+
+    .upgrade-btn {
+      padding: 0 18px;
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      &:hover {
+        background: #000;
+        border: 1.8px solid rgba(255, 255, 255, 0.7);
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .upgrade-btn {
+        display: none;
+      }
+    }
+
+    .menu {
+      .menu-list {
+        position: absolute;
+        top: 56px;
+        right: 32px;
+        padding: 4px;
+        border-radius: 3px;
+        background: #282828;
+
+        li {
+          padding: 12px;
+          display: flex;
+          justify-content: space-between;
+          border-radius: 2px;
+          cursor: default;
+
+          font-size: 14px;
+          font-weight: 400;
+          ion-icon {
+            padding-left: 16px;
+            font-size: 16px;
+          }
+          &.logout {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+          }
+          &:hover {
+            background: #3e3e3e;
+            &.logout {
+              border-top: 1px solid transparent;
+            }
+          }
+        }
+
+        display: none;
+      }
+
+      .menu-btn {
+        column-gap: 4px;
+        padding: 2px 8px 2px 2px;
+        background: #0a0713;
+        img {
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+        }
+        ion-icon {
+          font-size: 16px;
+          transition: transform 0.2s;
+        }
+      }
+
+      /* Active Menu */
+      &.active {
+        .menu-list {
+          display: block;
+        }
+        .menu-btn {
+          ion-icon {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .menu-btn {
+          padding: 2px;
+          h4,
+          ion-icon {
+            display: none;
+          }
+        }
+        &.active {
+          padding: 2px;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 540px) {
+  .navbar {
+    padding: 0 16px;
+    height: 52px;
+
+    .navbar-left button {
+      display: none;
+    }
+
+    .navbar-right {
+      column-gap: 12px;
+      .playlist-btn {
+        display: flex;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background: #0a0713;
+        ion-icon {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .playlist-modal-container {
+    display: none;
+  }
+}

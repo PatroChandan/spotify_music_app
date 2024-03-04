@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Spotify Circular";
+  src: url("./assets/fonts/CircularSpotifyText-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Spotify Circular";
+  src: url("./assets/fonts/CircularSpotifyText-Book.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Spotify Circular";
+  src: url("./assets/fonts/CircularSpotifyText-BookItalic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Spotify Circular";
+  src: url("./assets/fonts/CircularSpotifyText-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Spotify Circular";
+  src: url("./assets/fonts/CircularSpotifyText-MediumItalic.otf");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Spotify Circular";
+  src: url("./assets/fonts/CircularSpotifyText-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Spotify Circular";
+  src: url("./assets/fonts/CircularSpotifyText-Black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Spotify Circular";
+  src: url("./assets/fonts/CircularSpotifyText-BlackItalic.otf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Spotify Circular", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* General Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+img {
+  object-fit: cover;
+}
+
+/* Text Styles */
+.title {
+  font-size: 96px;
+  font-weight: 900;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #b3b3b3;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  &:hover {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  &:active {
+    background: rgba(255, 255, 255, 0.75);
+  }
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 13px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

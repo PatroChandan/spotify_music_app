@@ -1,0 +1,87 @@
+.logIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+  margin: auto;
+}
+.inputRegion {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.disc {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.box1 {
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.btn {
+  width: 100%;
+  font-weight: bold;
+  background-color: rgb(3, 202, 3);
+  color: black;
+  border: none;
+  padding: 14px 5px;
+  border-radius: 30px;
+}
+.forgot {
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.forgot a {
+  text-decoration: none;
+  color: gray;
+}
+.line {
+  width: 100%;
+  border: 1px solid gray;
+  margin-bottom: 20px;
+}
+.dont {
+  font-size: larger;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.div-btn {
+  width: 100%;
+  border: 2px solid gray;
+  padding: 12px 5px;
+  border-radius: 30px;
+}
+.div-btn a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: gray;
+}
+@media (max-width: 1024px) {
+  .inputRegion {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .inputRegion {
+    width: 90%;
+  }
+}
